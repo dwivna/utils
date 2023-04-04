@@ -7,6 +7,8 @@
     "start:dev": "npx nodemon",
     "start": "npm run build && node build/index.js",
     "build": "rimraf ./build && tsc",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +27,10 @@
   "homepage": "https://github.com/dwivna/utils#readme",
   "devDependencies": {
     "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0",
+    "eslint-plugin-no-loops": "^0.3.0",
     "nodemon": "^2.0.22",
     "rimraf": "^4.4.1",
     "ts-node": "^10.9.1",
